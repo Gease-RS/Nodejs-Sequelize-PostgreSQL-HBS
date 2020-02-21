@@ -4,15 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "PUZZE_DEBUG=true node index.js",
+    "prod": "PUZZLE_DEBUG=false node index.js",
+    "start": "npm run prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
     "express": "^4.17.1",
-    "hbs": "^4.1.0",
+    "express-hbs": "^2.3.0",
     "sequelize": "^5.21.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1",
+    "pg": "^7.18.2"
   }
 }

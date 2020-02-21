@@ -1,3 +1,5 @@
-const app = require('./server').app;
+const app = require('./server').app
+const debug = require('debug')
+const CONFIG = require('./config')
 
-app.listen(3333, () => console.log("Server running on http://localhost:3333/"))
+app.listen(CONFIG.SERVVER_PORT, () => debug.log('Server running on http://localhost:3333/'))
