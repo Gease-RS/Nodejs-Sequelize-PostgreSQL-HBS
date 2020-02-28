@@ -1,17 +1,28 @@
 const express = require('express')
 const bp = require('body-parser')
+const exhbs = require('express-hbs')
+const path = require('path')
 
 const app = express()
 
 const routes = {
-    api: require('./routes/api'),
-    pages: require('./routes/pages')
+    api: require('./routes/api').route,
+    pages: require('./routes/pages').route
 }
 
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: true}))
 
+app.engine('hbs', exhbs.express4({
+    partialsDir:path.join(__dirname, './views/partials'),
+    layoutsDir: path.join(__dirname, './views/layouts'),
+    defaultLayout: path.join(__dirname, './views/layouts/main.hbs')
+}))
+app.set('view engine', 'hbs')
+app.set('views', __dirname + '/views')
+
 app.use('/api', routes.api)
-app.get('/', (req, res) => res.send('hello'))
+app.use('/', routes.pages)
+app.use('/', express.static(path.join(__dirname, 'public_static')))
 
 exports.app = app

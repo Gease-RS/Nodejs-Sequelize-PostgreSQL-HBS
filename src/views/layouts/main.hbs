@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOSS</title>
+    <link rel="stylesheet" type="text/css" href="/lib/semantic.min.css">
+    <script
+    src="/lib/jquery-3.4.1.min.js"></script>
+    <script src="/lib/semantic.min.js"></script>
+</head>
+<body>
+    <div class="ui top fixed huge inverted menu red">
+        <div class="ui container">
+            <div class="header item">BOSS</div>
+            <a href="/leaderboard" class="item">
+                <i class="sort content descending icon"></i>
+                Tasks
+            </a>
+            <a href="/tasks" class="item">
+                <i class="sort content descending icon"></i>
+                Tasks
+            </a>
+            <div class="ui simple dropdown item">
+                <i class="checked calendar icon"></i>
+                Claim
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="" class="item" href="/claims/views">View</a>
+                    <a href="" class="item" href="/claims/add">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui main container">
+        {{{body}}}
+    </div>
+</body>
+</html>

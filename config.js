@@ -1,20 +1,18 @@
+
 const DB = {
-    DATABASE: 'puzzebounty',
-    USERNAME: 'puzzeuser',
+    DATABASE: 'puzzlebounty',
+    USERNAME: 'postgres',
     PASSWORD: 'postgres'
 }
 
-const DATABASE_URI = 
-    process.env.DATABASE_URI || `postgres://${DB.USERNAME}:${DB.PASSWORD}@localhost:5432/${DB.DATABASE}`
+const DATABASE_URI = `postgres://${DB.USERNAME}:${DB.PASSWORD}@localhost:5432/${DB.DATABASE}`
 
-const SERVER_PORT = process.env.PORT || 3333
+const SERVER_PORT = 3333
 
-const  DEBUG = process.env.PUZZE_DEBUG || false
 
 const CONFIG = {
     DATABASE_URI,
     SERVER_PORT,
-    DEBUG
 }
 
-exports = CONFIG
+module.exports = exports = CONFIG

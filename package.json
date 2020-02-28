@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "PUZZE_DEBUG=true node index.js",
-    "prod": "PUZZLE_DEBUG=false node index.js",
-    "start": "npm run prod"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +18,7 @@
   },
   "devDependencies": {
     "eslint": "^4.4.1",
+    "nodemon": "^2.0.2",
     "pg": "^7.18.2"
   }
 }
