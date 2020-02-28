@@ -14,9 +14,9 @@ app.use(bp.json())
 app.use(bp.urlencoded({ extended: true}))
 
 app.engine('hbs', exhbs.express4({
-    partialsDir:path.join(__dirname, './views/partials'),
-    layoutsDir: path.join(__dirname, './views/layouts'),
-    defaultLayout: path.join(__dirname, './views/layouts/main.hbs')
+    partialsDir: __dirname + '/views/partials',
+    layoutsDir: __dirname + '/views/layouts',
+    defaultLayout: __dirname + '/views/layouts/main.hbs'
 }))
 app.set('view engine', 'hbs')
 app.set('views', __dirname + '/views')
