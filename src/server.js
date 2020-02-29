@@ -18,8 +18,18 @@ app.engine('hbs', exhbs.express4({
     layoutsDir: __dirname + '/views/layouts',
     defaultLayout: __dirname + '/views/layouts/main.hbs'
 }))
-app.set('view engine', 'hbs')
 app.set('views', __dirname + '/views')
+app.set('view engine', 'hbs')
+
+exhbs.registerHelper('equal', function(lvalue, rvalue, options) {
+    if(arguments.length < 3)
+        throw new Error('Handlebars Helper equal needs 2 parameters')
+    if( lvalue != rvalue ) {
+        return options.inverse(this)
+    } else { 
+        return options.fn(this)
+    }
+})
 
 app.use('/api', routes.api)
 app.use('/', routes.pages)

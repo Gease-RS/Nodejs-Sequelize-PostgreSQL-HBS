@@ -36,3 +36,8 @@ db.sync({
 })
 
 exports.db = db
+exports.models = {
+    User,
+    Task, 
+    Claim
+}

@@ -9,6 +9,11 @@
     <script
     src="/lib/jquery-3.4.1.min.js"></script>
     <script src="/lib/semantic.min.js"></script>
+    <style>
+        .main.container { 
+            margin-top: 6em;
+        }
+    </style>
 </head>
 <body>
     <div class="ui top fixed huge inverted menu red">
@@ -16,23 +21,29 @@
             <div class="header item">BOSS</div>
             <a href="/leaderboard" class="item">
                 <i class="sort content descending icon"></i>
-                Tasks
+                leaderboard
             </a>
-            <a href="/tasks" class="item">
-                <i class="sort content descending icon"></i>
+           <div class="ui simple dropdown item">
+                <i class="tasks icon"></i>
                 Tasks
-            </a>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="" class="item" href="/tasks/show">View</a>
+                    <a href="" class="item" href="/tasks/add">Add</a>
+                </div>
+            </div>
             <div class="ui simple dropdown item">
                 <i class="checked calendar icon"></i>
                 Claim
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                    <a href="" class="item" href="/claims/views">View</a>
+                    <a href="" class="item" href="/claims/show">View</a>
                     <a href="" class="item" href="/claims/add">Add</a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="ui main container">
         {{{body}}}
     </div>

@@ -1,0 +1,32 @@
+<form class="ui form" method="post" action="/tasks/add">
+
+    <div class="field">
+        <label for="">Task Title</label>
+        <input name="title" placeholder="Task Title, eg. 'Dynamic Programming (Medium)'" type="text">
+    </div>
+
+    <div class="field">
+        <label for="">Task Descripition</label>
+        <textarea 
+            name="description" 
+            rows="7"
+            placeholder="Task Description, eg. 'Create a question on DP of moderate level'" 
+            type="text"
+        >
+        </textarea>
+    </div>
+ 
+    <div class="field">
+        <label for="">Bounty Amount</label>
+        <input name="bounty" placeholder="Bounty points for this tasks, eg. 500" type="number">
+    </div>
+
+    <div class="field">
+        <label for="">Instances</label>
+        <input name="instances" placeholder="Instances of this tasks, eg. 2" type="number">
+    </div>
+
+    <div class="ui container center aligned">
+        <button class="ui button green" type="submit">Submit</button>
+    </div>
+</form>

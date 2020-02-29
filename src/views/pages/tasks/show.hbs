@@ -1,0 +1,35 @@
+<div class="ui very relaxed divided items">
+    {{#each tasks as | task |}}
+        <div class="four wide item">
+            <div class="image">
+                <a class="ui statistic" href="http:/tasks/{{task.id}}">
+                    <div class="value">
+                        {{task.bounty}}
+                    </div>
+                    <div class="label">
+                        BOUNTY POINTS
+                    </div>
+                </a>
+            </div>
+            <div class="middle aligned content">
+                <a href="" class="header user">{{task.title}}</a>
+                
+                <div class="description">
+                    {{task.description}}
+                </div>
+                <div class="extra">
+                    {{#equal task.status "new"}}
+                        <div class="ui label green">{{task.status}}</div>
+                    {{/equal}}
+                    {{#equal task.status "done"}}
+                        <div class="ui label grey">{{task.status}}</div>
+                    {{/equal}}
+                </div>
+               
+                <div class="extra">
+                  <div class="ui label yellow">{{task.status}}</div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
